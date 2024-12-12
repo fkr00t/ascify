@@ -25,7 +25,7 @@ The **Advanced ASCII Banner Maker** is a Python-based tool designed to generate 
 
 Install the required libraries using the following command:
 ```bash
-pip install pyfiglet prettytable
+pip install -r requirements.txt
 ```
 
 ---
