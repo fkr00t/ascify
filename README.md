@@ -85,23 +85,6 @@ The file `hello_banner.txt` will now contain your ASCII banner.
 ![Images 2](https://github.com/user-attachments/assets/3d9b8e0a-7ec5-4f63-8874-7fa812095b8e)
 
 ---
-
-## **Contributing**
-Contributions are welcome! To contribute:
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes and push the branch.
-4. Submit a pull request for review.
-
----
-
-## **Author**
-- **fkr00t**
-- [GitHub Profile](https://github.com/fkr00t)
-- [LinkedIn](https://www.linkedin.com/in/fkr00t)
-
----
-
 ## **License**
 This project is licensed under the [MIT License](LICENSE). Feel free to use and modify it as per your needs.
 
