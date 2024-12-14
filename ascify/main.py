@@ -20,7 +20,7 @@ FOREGROUND_COLORS = {
 }
 
 # Application version
-APP_VERSION = "1.0.0"
+APP_VERSION = "2024.2"
 
 
 def main():

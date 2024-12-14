@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="ascify",  # Nama package
-    version="1.0.0",  # Versi package
+    version="2024.2",  # Versi package
     description="A tool to generate ASCII banners with customizable fonts and colors",
     long_description=open("README.md").read(),  # Deskripsi panjang dari README.md
     long_description_content_type="text/markdown",  # Format README.md
