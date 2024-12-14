@@ -24,7 +24,6 @@ The **Advanced ASCII Banner Maker** is a Python-based tool designed to generate 
   - [`prettytable`](https://pypi.org/project/prettytable/)
   - [`colorama`](https://pypi.org/project/colorama//)
 
-
 ## **How to Use**
 1. Clone the repository:
    ```bash
