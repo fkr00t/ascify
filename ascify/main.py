@@ -129,6 +129,7 @@ if __name__ == "__main__":
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Advanced ASCII Banner Maker")
     parser.add_argument("-v", "--version", action="store_true", help="Show program's version and exit")
+    parser.add_argument("-h", "--help", action="store_true", help="Show this help message and exit")
 
     args = parser.parse_args()
 
@@ -137,5 +138,10 @@ if __name__ == "__main__":
         print(f"Advanced ASCII Banner Maker {APP_VERSION}")
         sys.exit(0)
 
-    # Run the main program
+    # Handle -h or --help
+    if args.help:
+        parser.print_help()
+        sys.exit(0)
+
+    # Run the main program only if no arguments are provided
     main()
