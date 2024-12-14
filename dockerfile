@@ -1,19 +1,19 @@
-# Gunakan image dasar Python
+# Use Python base image
 FROM python:3.9-slim
 
-# Tetapkan direktori kerja di dalam container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Salin file dari GitHub repository
+# Copy files from GitHub repository
 RUN apt-get update && apt-get install -y git && \
     git clone https://github.com/fkr00t/ascify.git . && \
     apt-get remove -y git && apt-get autoremove -y
 
-# Instal dependensi aplikasi
+# Install application dependencies
 RUN pip install --no-cache-dir .
 
-# Tetapkan entry point untuk command-line tool `ascify`
+# Set the entry point for the `ascify` command-line tool
 ENTRYPOINT ["ascify"]
 
-# Tetapkan default argument (dapat diubah saat runtime)
+# Set the default argument (can be overridden at runtime)
 CMD ["-h"]
