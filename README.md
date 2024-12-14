@@ -43,7 +43,13 @@ The **Advanced ASCII Banner Maker** is a Python-based tool designed to generate 
    - View the generated banner in your terminal.
    - Optionally save the banner to a file.
 
+   
+## **How to Run**
+```bash
+   ascify 
+   ```
 ---
+
 
 ## **Example**
 ### **Input**
