@@ -22,13 +22,8 @@ The **Advanced ASCII Banner Maker** is a Python-based tool designed to generate 
 - Dependencies:
   - [`pyfiglet`](https://pypi.org/project/pyfiglet/)
   - [`prettytable`](https://pypi.org/project/prettytable/)
+  - [`colorama`](https://pypi.org/project/colorama//)
 
-Install the required libraries using the following command:
-```bash
-pip install -r requirements.txt
-```
-
----
 
 ## **How to Use**
 1. Clone the repository:
