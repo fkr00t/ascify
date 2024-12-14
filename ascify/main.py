@@ -1,7 +1,26 @@
 import pyfiglet
 from pyfiglet import FigletFont
 from prettytable import PrettyTable
+from colorama import Fore, Style, init
+import argparse
 import sys
+
+# Initialize colorama
+init(autoreset=True)
+
+# Define available foreground colors with their names
+FOREGROUND_COLORS = {
+    "1": (Fore.RED, "Red"),
+    "2": (Fore.GREEN, "Green"),
+    "3": (Fore.YELLOW, "Yellow"),
+    "4": (Fore.BLUE, "Blue"),
+    "5": (Fore.MAGENTA, "Magenta"),
+    "6": (Fore.CYAN, "Cyan"),
+    "7": (Fore.WHITE, "White")
+}
+
+# Application version
+APP_VERSION = "1.0.0"
 
 
 def main():
@@ -19,7 +38,6 @@ def main():
          Advanced ASCII Banner Maker           
               Author: fkr00t                     
               GitHub: github.com/fkr00t              
-              Version: 1.0.0  
         """
         print(banner_ascii)
         text = input("Enter your text: ")
@@ -62,18 +80,40 @@ def main():
             else:
                 print("Invalid input! Please enter a valid font number.")
 
+        # Ask the user to select a foreground color
+        print("\nAvailable Foreground Colors:")
+        for key, (color, name) in FOREGROUND_COLORS.items():
+            print(f"{key}. {color}{name}{Style.RESET_ALL}")
+
+        while True:
+            fg_choice = input("\nSelect a foreground color (enter number): ")
+            if fg_choice in FOREGROUND_COLORS:
+                foreground, color_name = FOREGROUND_COLORS[fg_choice]
+                print(f"\nYou selected: {foreground}{color_name}{Style.RESET_ALL}")
+                break
+            else:
+                print("Invalid input! Please select a valid color.")
+
         # Generate the ASCII banner
         banner = pyfiglet.figlet_format(text, font=font)
         print("\nGenerated ASCII Banner:")
-        print(banner)
+        print(foreground + banner)
 
         # Ask if the user wants to save the result to a file
-        save_choice = input("Do you want to save the result to a file? (Y/N): ").strip().lower()
-        if save_choice in ["yes", "y", "YES", "Y"]:
-            file_name = input("Enter the file name (e.g., output.txt): ").strip()
+        while True:
+            save_choice = input("Do you want to save the result to a file? (Y/N): ").strip().lower()
+            if save_choice in ["y", "n"]:  # Accept only 'y' or 'n'
+                break
+            else:
+                print("Invalid input! Please enter 'Y' or 'N'.")
+
+        if save_choice == "y":
+            file_name = input("Enter the file name (e.g., output.txt, press Enter for default): ").strip()
+            if not file_name:  # If the user presses Enter without input
+                file_name = "output.txt"  # Default file name
             try:
                 with open(file_name, "w") as file:
-                    file.write(banner)
+                    file.write(banner)  # Save only the plain text banner
                 print(f"The result has been saved to: {file_name}")
             except Exception as e:
                 print(f"An error occurred while saving the file: {e}")
@@ -86,4 +126,10 @@ def main():
 
 
 if __name__ == "__main__":
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(description="Advanced ASCII Banner Maker")
+    parser.add_argument("-v", "--version", action="version", version=f"Advanced ASCII Banner Maker {APP_VERSION}")
+
+    args = parser.parse_args()
+
     main()

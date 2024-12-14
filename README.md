@@ -41,7 +41,7 @@ pip install -r requirements.txt
    ```
 3. Run the application:
    ```bash
-   python ascify.py
+   pip install .
    ```
 4. Follow the on-screen instructions:
    - Enter the text you want to convert into an ASCII banner.
