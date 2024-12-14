@@ -20,7 +20,7 @@ FOREGROUND_COLORS = {
 }
 
 # Application version
-APP_VERSION = "2024.2"
+APP_VERSION = "1.0.0"
 
 
 def main():
@@ -128,11 +128,14 @@ def main():
 if __name__ == "__main__":
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Advanced ASCII Banner Maker")
-    parser.add_argument("-v", "--version", action="version", version=f"Advanced ASCII Banner Maker {APP_VERSION}")
+    parser.add_argument("-v", "--version", action="store_true", help="Show program's version and exit")
 
-    # Only run main() if no arguments provided
-    args, unknown = parser.parse_known_args()
+    args = parser.parse_args()
 
-    # If no arguments are passed, run the program
-    if not unknown:
-        main()
+    # Handle -v or --version
+    if args.version:
+        print(f"Advanced ASCII Banner Maker {APP_VERSION}")
+        sys.exit(0)
+
+    # Run the main program
+    main()
