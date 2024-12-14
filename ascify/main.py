@@ -130,6 +130,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Advanced ASCII Banner Maker")
     parser.add_argument("-v", "--version", action="version", version=f"Advanced ASCII Banner Maker {APP_VERSION}")
 
-    args = parser.parse_args()
+    # Only run main() if no arguments provided
+    args, unknown = parser.parse_known_args()
 
-    main()
+    # If no arguments are passed, run the program
+    if not unknown:
+        main()
