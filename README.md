@@ -25,12 +25,6 @@ The **Advanced ASCII Banner Maker** is a Python-based tool designed to generate 
   - [`pyfiglet`](https://pypi.org/project/pyfiglet/)
   - [`prettytable`](https://pypi.org/project/prettytable/)
   - [`colorama`](https://pypi.org/project/colorama//)
-  
-
-- **For Linux Users**: Ensure `xclip` is installed for clipboard functionality:
-   ```bash
-   sudo apt-get install xclip
-   ```
 
 ## **How to Use**
 1. Clone the repository:
