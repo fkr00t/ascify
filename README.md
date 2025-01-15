@@ -48,5 +48,5 @@ The **Advanced ASCII Banner Maker** is a Python-based tool designed to generate 
    
 ## **How to Run**
    ```bash
-     ascify
+    ascify
    ```
