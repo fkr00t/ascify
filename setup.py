@@ -13,8 +13,8 @@ setup(
     include_package_data=True,
     install_requires=[
         "pyfiglet>=1.0.2",  # Pastikan versi pyfiglet yang digunakan
-        "prettytable>=3.12.0",  # Library untuk menampilkan tabel font
-        "colorama>=0.4.4",  # Library untuk warna terminal
+        "prettytable",  # Library untuk menampilkan tabel font
+        "colorama",  # Library untuk warna terminal
     ],
     entry_points={
         "console_scripts": [
