@@ -39,13 +39,12 @@ The **Advanced ASCII Banner Maker** is a Python-based tool designed to generate 
    ```bash
    pip install .
    ```
-   
-**Linux Users**: Ensure `xclip` is installed for clipboard functionality:
+4. **Linux Users**: Ensure `xclip` is installed for clipboard functionality:
    ```bash
-     sudo apt-get install xclip
+   sudo apt-get install xclip
    ```
-
+   
 ## **How to Run**
-```bash
-   ascify 
+   ```bash
+     ascify
    ```
