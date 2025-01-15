@@ -1,8 +1,23 @@
 from setuptools import setup, find_packages
+import subprocess
+
+# Fungsi untuk uninstall dan install ulang pyfiglet
+def reinstall_pyfiglet():
+    try:
+        # Uninstall pyfiglet
+        subprocess.check_call([sys.executable, "-m", "pip", "uninstall", "-y", "pyfiglet"])
+        # Install ulang pyfiglet
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "pyfiglet"])
+        print("pyfiglet has been reinstalled successfully.")
+    except Exception as e:
+        print(f"Failed to reinstall pyfiglet: {e}")
+
+# Jalankan fungsi reinstall_pyfiglet saat setup.py dijalankan
+reinstall_pyfiglet()
 
 setup(
     name="ascify",
-    version="1.1.0",
+    version="1.0.0",
     description="A tool to generate ASCII banners with customizable fonts and colors",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
@@ -12,7 +27,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        "pyfiglet>=1.0.2",  # Pastikan versi pyfiglet yang digunakan
+        "pyfiglet",  # Pastikan versi pyfiglet yang digunakan
         "prettytable",  # Library untuk menampilkan tabel font
         "colorama",  # Library untuk warna terminal
     ],
