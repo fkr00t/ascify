@@ -4,10 +4,13 @@ FROM python:3.9-slim
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy files from GitHub repository
-RUN apt-get update && apt-get install -y git && \
-    git clone https://github.com/fkr00t/ascify.git . && \
-    apt-get remove -y git && apt-get autoremove -y
+# Install system dependencies (xclip for clipboard support on Linux)
+RUN apt-get update && apt-get install -y \
+    xclip \  # Required for clipboard functionality on Linux
+    && rm -rf /var/lib/apt/lists/*  # Clean up to reduce image size
+
+# Copy the application files from the local directory
+COPY . .
 
 # Install application dependencies
 RUN pip install --no-cache-dir .

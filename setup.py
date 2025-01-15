@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="ascify",  # Nama package
-    version="1.0.0",  # Versi package (gunakan format umum)
+    version="1.1.0",  # Versi package
     description="A tool to generate ASCII banners with customizable fonts and colors",
     long_description=open("README.md").read(),  # Deskripsi panjang dari README.md
     long_description_content_type="text/markdown",  # Format README.md
@@ -12,10 +12,9 @@ setup(
     packages=find_packages(),  # Otomatis menemukan folder package
     include_package_data=True,  # Sertakan data non-Python
     install_requires=[
-        "pyfiglet",
-        "prettytable",
-        "colorama",
-        "pyperclip",  # Tambahkan pyperclip di sini
+        "pyfiglet",  # Library untuk membuat ASCII art
+        "prettytable",  # Library untuk menampilkan tabel font
+        "colorama",  # Library untuk warna terminal
     ],  # Dependencies
     entry_points={
         "console_scripts": [
