@@ -14,7 +14,8 @@ setup(
     install_requires=[
         "pyfiglet",
         "prettytable",
-        "colorama"
+        "colorama",
+        "pyperclip",  # Tambahkan pyperclip di sini
     ],  # Dependencies
     entry_points={
         "console_scripts": [
