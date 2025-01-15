@@ -9,7 +9,7 @@ class CustomInstall(install):
         # Jalankan instalasi normal
         install.run(self)
 
-        # Jalankan post-install script
+        # Jalankan post-install script untuk pyfiglet
         self.reinstall_pyfiglet()
 
     def reinstall_pyfiglet(self):
