@@ -12,13 +12,13 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        "pyfiglet",
-        "prettytable",
-        "colorama",
+        "pyfiglet>=1.0.2",  # Pastikan versi pyfiglet yang digunakan
+        "prettytable>=3.12.0",  # Library untuk menampilkan tabel font
+        "colorama>=0.4.4",  # Library untuk warna terminal
     ],
     entry_points={
         "console_scripts": [
-            "ascify=ascify.main:main",
+            "ascify=ascify.main:main",  # Membuat command-line script 'ascify'
         ],
     },
     classifiers=[
