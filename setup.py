@@ -36,7 +36,8 @@ setup(
     install_requires=[
         "pyfiglet",  # Pastikan versi pyfiglet yang digunakan
         "prettytable",  # Library untuk menampilkan tabel font
-        "colorama"  # Library untuk warna terminal
+        "colorama",  # Library untuk warna terminal
+        "pyperclip"
     ],
     entry_points={
         "console_scripts": [
