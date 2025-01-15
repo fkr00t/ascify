@@ -53,3 +53,7 @@ The **Advanced ASCII Banner Maker** is a Python-based tool designed to generate 
    ```bash
    ascify
    ```
+## **How to Close Virtual Environment**
+   ```bash
+   deactivate
+   ```
