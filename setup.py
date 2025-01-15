@@ -1,6 +1,5 @@
 from setuptools import setup, find_packages
 
-
 setup(
     name="ascify",  # Nama package
     version="1.1.0",  # Versi package
