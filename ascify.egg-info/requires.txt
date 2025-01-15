@@ -1,4 +1,0 @@
-pyfiglet
-prettytable
-colorama
-pyperclip
