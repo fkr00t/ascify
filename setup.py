@@ -1,24 +1,24 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="ascify",  # Nama package
-    version="1.1.0",  # Versi package
+    name="ascify",
+    version="1.1.0",
     description="A tool to generate ASCII banners with customizable fonts and colors",
-    long_description=open("README.md").read(),  # Deskripsi panjang dari README.md
-    long_description_content_type="text/markdown",  # Format README.md
-    author="fkr00t",  # Nama penulis
-    author_email="fkr00t@duck.com",  # Email penulis
-    url="https://github.com/fkr00t/ascify",  # URL repositori GitHub
-    packages=find_packages(),  # Otomatis menemukan folder package
-    include_package_data=True,  # Sertakan data non-Python
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    author="fkr00t",
+    author_email="fkr00t@duck.com",
+    url="https://github.com/fkr00t/ascify",
+    packages=find_packages(),
+    include_package_data=True,
     install_requires=[
-        "pyfiglet",  # Library untuk membuat ASCII art
-        "prettytable",  # Library untuk menampilkan tabel font
-        "colorama",  # Library untuk warna terminal
-    ],  # Dependencies
+        "pyfiglet",
+        "prettytable",
+        "colorama",
+    ],
     entry_points={
         "console_scripts": [
-            "ascify=ascify.main:main",  # Membuat command-line script 'ascify'
+            "ascify=ascify.main:main",
         ],
     },
     classifiers=[
@@ -26,5 +26,5 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.6",  # Versi Python minimum
+    python_requires=">=3.6",
 )
