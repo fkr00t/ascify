@@ -1,26 +1,4 @@
 from setuptools import setup, find_packages
-from setuptools.command.install import install
-import subprocess
-import sys
-
-# Custom install class untuk menjalankan post-install script
-class CustomInstall(install):
-    def run(self):
-        # Jalankan instalasi normal
-        install.run(self)
-
-        # Jalankan post-install script untuk pyfiglet
-        self.reinstall_pyfiglet()
-
-    def reinstall_pyfiglet(self):
-        try:
-            # Uninstall pyfiglet
-            subprocess.check_call([sys.executable, "-m", "pip", "uninstall", "-y", "pyfiglet"])
-            # Install ulang pyfiglet
-            subprocess.check_call([sys.executable, "-m", "pip", "install", "pyfiglet"])
-            print("pyfiglet has been reinstalled successfully.")
-        except Exception as e:
-            print(f"Failed to reinstall pyfiglet: {e}")
 
 setup(
     name="ascify",
@@ -34,14 +12,13 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        "pyfiglet",  # Pastikan versi pyfiglet yang digunakan
-        "prettytable",  # Library untuk menampilkan tabel font
-        "colorama",  # Library untuk warna terminal
-
+        "pyfiglet",  # Library for generating ASCII art
+        "prettytable",  # Library for displaying font tables
+        "colorama",  # Library for terminal colors
     ],
     entry_points={
         "console_scripts": [
-            "ascify=ascify.main:main",  # Membuat command-line script 'ascify'
+            "ascify=ascify.main:main",  # Create a command-line script 'ascify'
         ],
     },
     classifiers=[
@@ -50,7 +27,4 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.6",
-    cmdclass={
-        'install': CustomInstall,  # Gunakan custom install class
-    },
 )
