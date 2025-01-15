@@ -45,6 +45,10 @@ The **Advanced ASCII Banner Maker** is a Python-based tool designed to generate 
    ascify
    ```
 ## **Virtual Environment**
+- Install virtualenv
+    ```bash
+  pip install virtualenv
+  ```
 - Create env
    ```bash
    virtualenv env
