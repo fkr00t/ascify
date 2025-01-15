@@ -20,7 +20,7 @@ def copy_to_clipboard_tkinter(text):
         root.clipboard_append(text)
         root.update()  # Pastikan teks disalin
         root.destroy()  # Tutup jendela
-        print("The result has been copied to clipboard using tkinter!")
+        print("The result has been copied to clipboard!")
     except Exception as e:
         print(f"An error occurred while copying to clipboard: {e}")
 
