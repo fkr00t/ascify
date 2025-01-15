@@ -3,22 +3,26 @@ from pyfiglet import FigletFont
 from prettytable import PrettyTable
 import argparse
 import sys
-import subprocess  # Untuk menggunakan xclip
+import tkinter as tk  # Menggunakan tkinter untuk clipboard
 
 # Application version
 APP_VERSION = "1.1.0"
 
 
-def copy_to_clipboard_xclip(text):
+def copy_to_clipboard_tkinter(text):
+    """
+    Copy text to clipboard using tkinter.
+    """
     try:
-        # Gunakan xclip untuk menyalin teks ke clipboard
-        process = subprocess.Popen(['xclip', '-selection', 'clipboard'], stdin=subprocess.PIPE)
-        process.communicate(input=text.encode('utf-8'))
-        print("The result has been copied to clipboard using xclip!")
+        root = tk.Tk()
+        root.withdraw()  # Sembunyikan jendela utama
+        root.clipboard_clear()
+        root.clipboard_append(text)
+        root.update()  # Pastikan teks disalin
+        root.destroy()  # Tutup jendela
+        print("The result has been copied to clipboard using tkinter!")
     except Exception as e:
         print(f"An error occurred while copying to clipboard: {e}")
-        print("Please ensure xclip is installed. You can install it by running:")
-        print("sudo apt-get install xclip")
 
 
 def main():
@@ -137,7 +141,7 @@ def main():
                 print("Invalid input! Please enter 'Y' or 'N'.")
 
         if copy_choice == "y":
-            copy_to_clipboard_xclip(banner)  # Gunakan xclip untuk menyalin ke clipboard
+            copy_to_clipboard_tkinter(banner)  # Gunakan tkinter untuk menyalin ke clipboard
         else:
             print("The result was not copied to clipboard.")
 
