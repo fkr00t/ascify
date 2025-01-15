@@ -14,8 +14,7 @@ setup(
     install_requires=[
         "pyfiglet",  # Library for generating ASCII art
         "prettytable",  # Library for displaying font tables
-        "colorama",  # Library for terminal colors
-        "virtualenv" # Library for Virtuel Environtment
+        "colorama"  # Library for terminal colors
     ],
     entry_points={
         "console_scripts": [

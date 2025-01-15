@@ -25,7 +25,6 @@ The **Advanced ASCII Banner Maker** is a Python-based tool designed to generate 
   - [`pyfiglet`](https://pypi.org/project/pyfiglet/)
   - [`prettytable`](https://pypi.org/project/prettytable/)
   - [`colorama`](https://pypi.org/project/colorama//)
-  - [`virtualenv`](https://pypi.org/project/virtualenv//)
 
 ## **How to Use**
 1. Clone the repository:
@@ -36,15 +35,7 @@ The **Advanced ASCII Banner Maker** is a Python-based tool designed to generate 
    ```bash
    cd ascify
    ```
-3. Set Up a Virtual Environment
-   ```bash
-   virtualenv env
-   ```
-4. Activate the Virtual Environment
-   ```bash
-   source env/bin/activate
-   ```
-5. Run the application:
+3. Run the application:
    ```bash
    pip install .
    ```
@@ -53,7 +44,17 @@ The **Advanced ASCII Banner Maker** is a Python-based tool designed to generate 
    ```bash
    ascify
    ```
-## **How to Close Virtual Environment**
+## **Virtual Environment**
+- Create env
+   ```bash
+   virtualenv env
+   ```
+- Activate the Virtual Environment
+   ```bash
+   source env/bin/activate
+   ```
+- Close Virtual Environment
    ```bash
    deactivate
    ```
+   
