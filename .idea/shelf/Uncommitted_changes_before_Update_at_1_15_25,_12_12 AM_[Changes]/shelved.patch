@@ -1,0 +1,17 @@
+Index: .idea/discord.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"DiscordProjectSettings\">\n    <option name=\"show\" value=\"ASK\" />\n    <option name=\"description\" value=\"\" />\n    <option name=\"applicationTheme\" value=\"default\" />\n    <option name=\"iconsTheme\" value=\"default\" />\n    <option name=\"button1Title\" value=\"\" />\n    <option name=\"button1Url\" value=\"\" />\n    <option name=\"button2Title\" value=\"\" />\n    <option name=\"button2Url\" value=\"\" />\n    <option name=\"customApplicationId\" value=\"\" />\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/discord.xml b/.idea/discord.xml
+--- a/.idea/discord.xml	(revision 1ba12de7be0410ea64cb8038e29cd8b1a29f851e)
++++ b/.idea/discord.xml	(date 1736916132172)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="DiscordProjectSettings">
+-    <option name="show" value="ASK" />
++    <option name="show" value="PROJECT_FILES" />
+     <option name="description" value="" />
+     <option name="applicationTheme" value="default" />
+     <option name="iconsTheme" value="default" />

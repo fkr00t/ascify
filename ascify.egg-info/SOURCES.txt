@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+ascify/__init__.py
+ascify/main.py
+ascify.egg-info/PKG-INFO
+ascify.egg-info/SOURCES.txt
+ascify.egg-info/dependency_links.txt
+ascify.egg-info/entry_points.txt
+ascify.egg-info/requires.txt
+ascify.egg-info/top_level.txt
