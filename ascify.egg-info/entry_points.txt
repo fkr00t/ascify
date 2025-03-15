@@ -1,0 +1,2 @@
+[console_scripts]
+ascify = ascify.main:main
