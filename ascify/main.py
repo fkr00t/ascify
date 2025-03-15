@@ -27,19 +27,17 @@ def copy_to_clipboard_tkinter(text):
 
 def main():
     try:
-        banner_ascii = r"""
-         _______  _______  _______ _________ _______          
-        (  ___  )(  ____ \(  ____ \\__   __/(  ____ \|\     /|
-        | (   ) || (    \/| (    \/   ) (   | (    \/( \   / )
-        | (___) || (_____ | |         | |   | (__     \ (_) / 
-        |  ___  |(_____  )| |         | |   |  __)     \   /  
-        | (   ) |      ) || |         | |   | (         ) (   
-        | )   ( |/\____) || (____/\___) (___| )         | |   
-        |/     \|\_______)(_______/\_______/|/          \_/   
+        banner_ascii = r"""   
+    ___              _ ____     
+   /   |  __________(_) __/_  __
+  / /| | / ___/ ___/ / /_/ / / /
+ / ___ |(__  ) /__/ / __/ /_/ / 
+/_/  |_/____/\___/_/_/  \__, /  
+                       /____/   
 
-         Advanced ASCII Banner Maker           
-              Author: fkr00t                     
-              GitHub: github.com/fkr00t              
+Advance ASCII Banner Generator
+---------------------------------------
+Version: v1.1.0  |  Developed by: fkr00t          
         """
         print(banner_ascii)
         text = input("Enter your text: ")

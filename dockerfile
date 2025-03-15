@@ -6,8 +6,8 @@ WORKDIR /app
 
 # Install system dependencies (tkinter for clipboard support)
 RUN apt-get update && apt-get install -y \
-    python3-tk \  # Required for tkinter
-    && rm -rf /var/lib/apt/lists/*  # Clean up to reduce image size
+    python3-tk \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copy the application files from the local directory
 COPY . .
